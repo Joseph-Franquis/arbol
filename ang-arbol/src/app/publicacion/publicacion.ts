@@ -1,4 +1,6 @@
 export interface Publicacion {
   id: number;
-  title: string;
+  titulo: string;
+  contenido: string;
+  usuario: string;
 }

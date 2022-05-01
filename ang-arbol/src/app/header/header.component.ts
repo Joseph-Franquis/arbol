@@ -17,7 +17,18 @@ export class HeaderComponent implements OnInit {
     },
     {
       "name": "Publicaciones",
-      "ruta": "/publi"
+      "ruta": "/publicacion"
+    }
+  ];
+
+  rutas_user = [
+    {
+    "name": "Inicio Sesion",
+    "ruta": "auth/iniciosesion"
+    },
+    {
+      "name": "Registrate",
+      "ruta": "auth/registro"
     }
   ];
   enlaces: Array<object>;
@@ -28,8 +39,14 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this);
+  }
 
+  ngAfterContentChecked(): void{
+  }
+
+  toggleMenuUser(): void{
+    document.querySelector('.menu-user-shadow')?.classList.toggle('desac');
+    document.querySelector('.menu-user')?.classList.toggle('desac');
   }
 
   comporbadorRuta(ruta: string): boolean{

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Publicacion } from './publicacion';
-import { PublicacionService } from './publicacion.service';
+import { Publicacion } from '../publicacion';
+import { PublicacionService } from '../publicacion.service';
 
 
 @Component({
@@ -19,12 +19,11 @@ export class PublicacionComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.getPubli();
-    // alert(this.publicaciones)
+    this.getPublicacionBD();
 
   }
 
-  getPubli(): void {
+  getPublicacionBD(): void {
     this.PublicacionService.getPublicaciones()
     .subscribe(publicaciones => this.publicaciones = publicaciones);
   }

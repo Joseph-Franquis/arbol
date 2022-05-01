@@ -26,5 +26,9 @@ export class PublicacionService {
       return this.http.get<Publicacion[]>(this.heroesUrl);
     }
 
+    getPublicacionShow(id: number): Observable<Publicacion> {
+      return this.http.get<Publicacion>(this.heroesUrl+"/"+id);
+    }
+
 
 }

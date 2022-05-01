@@ -51,7 +51,11 @@ nav {
   text-decoration: none;
 }
 
-.nav-list li .enlace {
+.enlace-list {
+  list-style: none;
+}
+
+li .enlace {
   pointer-events: auto;
   text-decoration: none;
   color: #000000;
@@ -75,8 +79,34 @@ nav {
   border-radius: 50%;
 }
 
-.desactivado {
+.enlace-desac {
   color: #999999 !important;
   pointer-events: none;
   cursor: default;
+}
+
+.desac {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.menu-user {
+  z-index: 3;
+  position: fixed;
+  height: 100%;
+  width: 30%;
+  background-color: rgba(245, 245, 245, 1);
+  top: 0;
+  right: 0;
+}
+
+.menu-user-shadow {
+  z-index: 2;
+  position: fixed;
+  height: 100%;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
 }

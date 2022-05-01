@@ -7,8 +7,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { PublicacionComponent } from './publicacion/publicacion.component';
+import { PublicacionComponent } from './publicacion/pub-list/publicacion.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { PubShowComponent } from './publicacion/pub-show/pub-show.component';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HomeComponent,
     PublicacionComponent,
+    LoginComponent,
+    RegisterComponent,
+    PubShowComponent,
   ],
   imports: [
     BrowserModule,
