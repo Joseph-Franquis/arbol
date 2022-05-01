@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: var(--pri-color);
+  width: 100%;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "i f";
+}
+
+.header-i{
+  display: grid;
+  grid-area: i;
+  grid-template-columns: 10% 90%;
+  grid-template-areas: "logo list";
+}
+
+.logo{
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list{
+  grid-area: list;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-f {
+  display: grid;
+  grid-area: f;
+  grid-template-columns: 90% 10%;
+  grid-template-areas: ". icon";
+}
+
+.nav-list li {
+  margin-right: 5%;
+}
+
+.nav-list li a {
+  text-decoration: none;
+}
+
+.nav-list li .enlace {
+  pointer-events: auto;
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav-list li a:hover {
+  color: #999999;
+}
+
+.user {
+  grid-area: icon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user svg{
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.desactivado {
+  color: #999999 !important;
+  pointer-events: none;
+  cursor: default;
+}

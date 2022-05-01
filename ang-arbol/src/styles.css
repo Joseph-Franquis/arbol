@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+/*Esto quita los margenes inecesarios*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /*Colores de la paginas*/
+  --pri-color: #FFEDDB;
+  --sec-color: #EDCDBB;
+  --ter-color: #E3B7A0;
+  --cur-color: #BF9270;
+}
