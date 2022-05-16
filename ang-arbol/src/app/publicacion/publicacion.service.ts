@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+// import { catchError, map, tap } from 'rxjs/operators';
 
 
 import { Publicacion } from './publicacion';
@@ -22,7 +22,7 @@ export class PublicacionService {
   ) {}
 
     /** GET heroes from the server */
-    getPublicaciones(): Observable<Publicacion[]> {
+    getPublicacionIndex(): Observable<Publicacion[]> {
       return this.http.get<Publicacion[]>(this.heroesUrl);
     }
 
@@ -30,5 +30,14 @@ export class PublicacionService {
       return this.http.get<Publicacion>(this.heroesUrl+"/"+id);
     }
 
+    getPublicacionStore(): Observable<Publicacion> {
+      return this.http.get<Publicacion>(this.heroesUrl);
+    }
+    getPublicacionUpdate(): Observable<Publicacion> {
+      return this.http.get<Publicacion>(this.heroesUrl);
+    }
+    getPublicacionDestroy(): Observable<Publicacion> {
+      return this.http.get<Publicacion>(this.heroesUrl);
+    }
 
 }

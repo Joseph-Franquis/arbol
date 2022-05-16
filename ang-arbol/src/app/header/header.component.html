@@ -5,7 +5,7 @@
     </div>
     <ul class="nav-list">
       <li class="enlace-list" *ngFor="let ruta_a of rutas_nav">
-        <a [href]="ruta_a.ruta" [ngClass]="{'enlace-desac': ruta_a.ruta == rute, 'enlace': ruta_a.ruta != rute}">{{ruta_a.name}}</a>
+        <a [routerLink]="ruta_a.ruta" [ngClass]="{'enlace-desac': ruta_a.ruta == router.url, 'enlace': ruta_a.ruta != router.url}">{{ruta_a.name}}</a>
       </li>
     </ul>
   </div>
@@ -16,7 +16,7 @@
   </div>
   <div class="menu-user desac">
     <li class="enlace-list" *ngFor="let ruta_u of rutas_user">
-      <a [href]="ruta_u.ruta" [ngClass]="{'desactivado': ruta_u.ruta == rute, 'enlace': ruta_u.ruta != rute}">{{ruta_u.name}}</a>
+      <a [routerLink]="ruta_u.ruta" [ngClass]="{'desactivado': ruta_u.ruta == router.url, 'enlace': ruta_u.ruta != router.url}">{{ruta_u.name}}</a>
     </li>
   </div>
   <div class="menu-user-shadow desac" (click)="toggleMenuUser()">

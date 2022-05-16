@@ -24,21 +24,21 @@ export class PubShowComponent implements OnInit {
         titulo: '',
         contenido: '',
         usuario: '',
+        creado: '',
+        actualizado: '',
     }
-  }
-
-  goBack(): void {
-    this.location.back();
   }
 
   ngOnInit(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
     this.getPublicacionBD(id);
+
   }
 
-  getPublicacionBD(id: number): void {
+   getPublicacionBD(id: number): void {
     this.PublicacionService.getPublicacionShow(id)
     .subscribe(publicacion => this.publicacion = publicacion);
+    console.log(this.publicacion);
   }
 
 }

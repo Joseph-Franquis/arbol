@@ -1,8 +1,10 @@
-<app-header></app-header>
-<ul class="heroes">
-  <li *ngFor="let publi of publicaciones">
-    <ul>
-      <li>{{ publi.id }}</li>
-    </ul>
+
+<ul class="publicaciones">
+  <li class="contenedor" *ngFor="let publi of publicaciones">
+      <div>
+        <input type="hidden" value="{{publi.id}}" class="id_pub">
+        <p>{{ publi.titulo }}</p>
+      </div>
+  </li>
 </ul>
-<app-footer></app-footer>
+

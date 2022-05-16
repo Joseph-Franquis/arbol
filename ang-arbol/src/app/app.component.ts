@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from './app.service'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ang-arbol';
+
+  constructor(
+    private AppService: AppService
+  ){
+
+  }
+
+  ngOnInit(): void {
+    //this code is for save token in localStorage
+    this.AppService.getToken().subscribe(respuesta =>{ localStorage.setItem("token",JSON.stringify(respuesta)) });
+  }
 }

@@ -3,4 +3,6 @@ export interface Publicacion {
   titulo: string;
   contenido: string;
   usuario: string;
+  creado: string;
+  actualizado: string;
 }

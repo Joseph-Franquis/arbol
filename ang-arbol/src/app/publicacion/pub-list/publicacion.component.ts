@@ -11,7 +11,8 @@ import { PublicacionService } from '../publicacion.service';
 })
 export class PublicacionComponent implements OnInit {
 
-  publicaciones: Publicacion [];
+  public publicaciones: Publicacion [];
+  div_pub: any;
 
 
   constructor(private PublicacionService: PublicacionService) {
@@ -20,11 +21,15 @@ export class PublicacionComponent implements OnInit {
 
   ngOnInit() {
     this.getPublicacionBD();
+  }
+
+  // funcion para cambiar abrir la publicacion al oprimir en ella
+  ngAfterContentChecked(){
 
   }
 
   getPublicacionBD(): void {
-    this.PublicacionService.getPublicaciones()
+    this.PublicacionService.getPublicacionIndex()
     .subscribe(publicaciones => this.publicaciones = publicaciones);
   }
 

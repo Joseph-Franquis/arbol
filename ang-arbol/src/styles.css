@@ -12,3 +12,13 @@
   --ter-color: #E3B7A0;
   --cur-color: #BF9270;
 }
+
+.contenedor{
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  /* box-shadow: ; */
+  background-color: antiquewhite;
+  list-style: none;
+}
+

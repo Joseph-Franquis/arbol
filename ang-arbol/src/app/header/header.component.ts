@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 
 export class HeaderComponent implements OnInit {
 
-  public rute: string;
+  //variable to save the current path
+  public router: Router;
+  //
   rutas_nav = [
     {
     "name": "Inicio",
@@ -33,8 +35,8 @@ export class HeaderComponent implements OnInit {
   ];
   enlaces: Array<object>;
 
-  constructor(router: Router, ) {
-    this.rute = router.url;
+  constructor(router: Router ) {
+    this.router = router;
     this.enlaces = [];
   }
 
@@ -50,7 +52,6 @@ export class HeaderComponent implements OnInit {
   }
 
   comporbadorRuta(ruta: string): boolean{
-    console.log(document.querySelector)
     return true;
   }
 
